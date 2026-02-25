@@ -10,7 +10,7 @@ Skills are Markdown files that shape how Copilot approaches a problem. Drop one 
 | --- | --- |
 | **[brainstorming](brainstorming/)** | Turns ideas into designs through collaborative dialogue. Explores requirements, proposes approaches, and validates incrementally before any code is written. |
 | **[excel-toolkit](excel-toolkit/)** | Reads, edits, analyzes, and creates Excel files (.xlsx, .csv, .tsv). Supports formulas, charts, and dashboard layouts. Includes Python helper scripts. |
-| **[frontend-development](frontend-development/)** | Builds production-ready React/Vue/Svelte components with accessibility-first implementation, focus management, and design system compliance. |
+| **[building-frontend-components](building-frontend-components/)** | Builds accessible, production-ready React/Vue/Svelte components with accessibility-first implementation, focus management, and design system compliance. |
 | **[powerpoint-toolkit](powerpoint-toolkit/)** | Builds, edits, analyzes, and improves PowerPoint presentations. Handles design patterns, text extraction, and quality feedback. Includes Python helper scripts. |
 | **[writing-plans](writing-plans/)** | Creates bite-sized implementation plans with exact file paths, test strategies, and commit instructions for each task. |
 | **[writing-skills](writing-skills/)** | A meta-skill for creating new skills using TDD principles (RED → GREEN → REFACTOR) with subagent-based baseline testing. Includes reference docs on prompt engineering. |
@@ -24,7 +24,7 @@ Copy any skill folder into your Copilot skills directory:
 cp -r brainstorming ~/.copilot/skills/
 
 # Install all skills
-cp -r brainstorming excel-toolkit frontend-development \
+cp -r brainstorming excel-toolkit building-frontend-components \
       powerpoint-toolkit writing-plans writing-skills \
       ~/.copilot/skills/
 ```

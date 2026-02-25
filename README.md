@@ -17,22 +17,39 @@ Skills are Markdown files that shape how Copilot approaches a problem. Drop one 
 
 ## Installation
 
-Copy any skill folder into your Copilot skills directory:
+Skills can be installed in either of two locations:
+
+- **`~/.copilot/skills/`** — user-level skills available across all your projects
+- **`.agent/skills/`** — project-level skills checked in alongside your code (relative to your project root)
+
+Copy any skill folder into your preferred skills directory:
 
 ```bash
-# Install a single skill
+# Install a single skill (user-level)
 cp -r brainstorming ~/.copilot/skills/
 
-# Install all skills
+# Install all skills (user-level)
 cp -r brainstorming excel-toolkit frontend-development \
       powerpoint-toolkit writing-plans writing-skills \
       ~/.copilot/skills/
+
+# Install a single skill (project-level)
+cp -r brainstorming .agent/skills/
+
+# Install all skills (project-level)
+cp -r brainstorming excel-toolkit frontend-development \
+      powerpoint-toolkit writing-plans writing-skills \
+      .agent/skills/
 ```
 
 Create the directory first if it doesn't exist:
 
 ```bash
+# User-level
 mkdir -p ~/.copilot/skills
+
+# Project-level
+mkdir -p .agent/skills
 ```
 
 The toolkit skills (excel-toolkit, powerpoint-toolkit) include Python scripts that install their own dependencies on first use. Python 3 is required.
@@ -83,7 +100,7 @@ Step-by-step instructions for the agent to follow.
 
 ## Creating Your Own Skills
 
-1. **Create a folder** in `~/.copilot/skills/` with your skill name.
+1. **Create a folder** in `~/.copilot/skills/` (user-level) or `.agent/skills/` (project-level) with your skill name.
 2. **Write a `SKILL.md`** with frontmatter (`name`, `description`) and instructions.
 3. **Test it** by asking Copilot to do something that matches your description trigger.
 4. **Iterate** — refine the instructions based on where the agent goes off track.
